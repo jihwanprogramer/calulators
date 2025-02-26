@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import calculate.Calculate;
 
-public class Main {
+public class CalculatorApp {
     public static void main(String[] args) {
 
         //결과 저장 ArrayList 생성
@@ -36,11 +36,11 @@ public class Main {
             if (operator == '+') {
                 result = calculator.add(firstNumber, secondNumber);
             } else if (operator == '-') {
-                result = calculator.Div(firstNumber, secondNumber);
+                result = calculator.Sub(firstNumber, secondNumber);
             } else if (operator == '*') {
                 result = calculator.Mul(firstNumber, secondNumber);
             } else if (operator == '/') {
-                result = calculator.Sub(firstNumber, secondNumber);
+                result = calculator.Div(firstNumber, secondNumber);
             }
 
             //결과 calculaotr 클래스에 있는 ArrayList에 추가
