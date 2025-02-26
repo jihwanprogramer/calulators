@@ -1,15 +1,17 @@
-package calculator;
+package calculatorApp;
 
 import java.util.Scanner;
+
+import calculate.Calculate;
 
 public class Main {
     public static void main(String[] args) {
 
+        Calculate calculator = new Calculate();
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            int result = 0;
-
+            double result = 0;
             System.out.println("숫자를 입력하세요(ex)5 4)");
             int firstNumber = sc.nextInt();
             int secondNumber = sc.nextInt();
@@ -19,13 +21,16 @@ public class Main {
             sc.nextLine();
 
             if (operator == '+') {
-                result = firstNumber + secondNumber;
-            } else if (operator == '-') {
-                result = firstNumber - secondNumber;
-            } else if (operator == '*') {
-                result = firstNumber * secondNumber;
-            } else if (operator == '/') {
-                result = firstNumber / secondNumber;
+                result = calculator.add(firstNumber, secondNumber);
+            }
+            else if (operator == '-') {
+                result = calculator.Div(firstNumber, secondNumber);
+            }
+            else if (operator == '*') {
+                result = calculator.Mul(firstNumber, secondNumber);
+            }
+            else if (operator == '/') {
+                result = calculator.Sub(firstNumber, secondNumber);
             }
 
             System.out.println("값=" + result);
