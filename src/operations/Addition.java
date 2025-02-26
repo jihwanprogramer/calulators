@@ -4,12 +4,15 @@ public class Addition {
     private double firstNum;
     private double secondNum;
 
-    public void setAddtion(double firstNum, double secondNum) {
+    //세터
+    public void setAddition(double firstNum, double secondNum) {
         this.firstNum = firstNum;
         this.secondNum = secondNum;
     }
 
-    public double getAddtion() {
+    //게터
+    public double getAddition() {
         return firstNum + secondNum;
     }
+
 }
