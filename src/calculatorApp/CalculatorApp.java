@@ -1,6 +1,5 @@
 package calculatorApp;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import calculate.Calculate;
@@ -8,13 +7,9 @@ import calculate.Calculate;
 public class CalculatorApp {
     public static void main(String[] args) {
 
-        //결과 저장 ArrayList 생성
-        ArrayList<Double> arrayList = new ArrayList<>();
-
         //계산 메소드가 모여있는 Calculate 클래스 객체 생성
         Calculate calculator = new Calculate();
         Scanner sc = new Scanner(System.in);
-
 
         while (true) {
             double result = 0;
@@ -43,11 +38,11 @@ public class CalculatorApp {
                 result = calculator.Div(firstNumber, secondNumber);
             }
 
-            //결과 calculaotr 클래스에 있는 ArrayList에 추가
-            calculator.AddResult();
+            //결과 calculaote 클래스에 있는 ArrayList에 추가
+            calculator.setresult(result);
 
             //값 출력
-            System.out.println("값=" + result);
+            System.out.println("값=" + calculator.getresult());
 
             //먼저 저장된 데이터 삭제
             calculator.removeResult();
@@ -56,6 +51,7 @@ public class CalculatorApp {
             System.out.println("1.계속하기(아무키나 입력) 2.종료(exit 입력)");
             String input = sc.next();
 
+            //exit 입력시 반복정지
             if (input.equals("exit")) {
                 break;
             }

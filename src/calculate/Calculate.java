@@ -14,8 +14,9 @@ public class Calculate {
     private final Division division;
 
     double result = 0;
+
     //게산 결과를 저장할 ArrayList
-    ArrayList<Double> arrayList = new ArrayList<>();
+    private ArrayList<Double> arrayList = new ArrayList<>();
 
     //생성자
     public Calculate() {
@@ -53,9 +54,14 @@ public class Calculate {
         return result;
     }
 
-    //결과 리스트 추가
-    public void AddResult() {
-        arrayList.add(result);
+    //결과 리스트 수정(세터)
+    public void setresult(double result) {
+        this.arrayList.add(result);
+    }
+
+    //결과 불러오기
+    public double getresult() {
+        return result;
     }
 
     //처음 값 제거
