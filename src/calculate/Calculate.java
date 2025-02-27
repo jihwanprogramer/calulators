@@ -6,6 +6,7 @@ import operations.Multiplication;
 import operations.Division;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Calculate {
     private final Addition addition;
@@ -16,7 +17,7 @@ public class Calculate {
     int result = 0;
 
     //게산 결과를 저장할 ArrayList
-    private ArrayList<Integer> arrayList = new ArrayList<>();
+    private List<Integer> arrayList = new ArrayList<>();
 
     //생성자
     public Calculate() {
