@@ -1,17 +1,17 @@
 package operations;
 
 public class Subtraction {
-    private double firstNum;
-    private double secondNum;
+    private int firstNum;
+    private int secondNum;
 
     //세터
-    public void setMSubtraction(double firstNum, double secondNum) {
+    public void setMSubtraction(int firstNum, int secondNum) {
         this.firstNum = firstNum;
         this.secondNum = secondNum;
     }
 
     //게터
-    public double getSubtraction() {
+    public int getSubtraction() {
         return firstNum / secondNum;
     }
 }

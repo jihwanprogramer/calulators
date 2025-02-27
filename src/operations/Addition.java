@@ -1,17 +1,17 @@
 package operations;
 
 public class Addition {
-    private double firstNum;
-    private double secondNum;
+    private int firstNum;
+    private int secondNum;
 
     //세터
-    public void setAddition(double firstNum, double secondNum) {
+    public void setAddition(int firstNum, int secondNum) {
         this.firstNum = firstNum;
         this.secondNum = secondNum;
     }
 
     //게터
-    public double getAddition() {
+    public int getAddition() {
         return firstNum + secondNum;
     }
 

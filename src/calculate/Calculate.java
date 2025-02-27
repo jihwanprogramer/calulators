@@ -13,10 +13,10 @@ public class Calculate {
     private final Multiplication multiplication;
     private final Division division;
 
-    double result = 0;
+    int result = 0;
 
     //게산 결과를 저장할 ArrayList
-    private ArrayList<Double> arrayList = new ArrayList<>();
+    private ArrayList<Integer> arrayList = new ArrayList<>();
 
     //생성자
     public Calculate() {
@@ -27,40 +27,40 @@ public class Calculate {
     }
 
     //덧셈 메서드
-    public double add(double num1, double num2) {
+    public int add(int num1, int num2) {
         addition.setAddition(num1, num2);
         result = addition.getAddition();
         return result;
     }
 
     //나눗셈 메서드
-    public double Div(double num1, double num2) {
+    public int Div(int num1, int num2) {
         division.setDivision(num1, num2);
         result = division.getDivision();
         return result;
     }
 
     //뺄셈 메서드
-    public double Sub(double num1, double num2) {
+    public int Sub(int num1, int num2) {
         subtraction.setMSubtraction(num1, num2);
         result = subtraction.getSubtraction();
         return result;
     }
 
     //곱셈 메서드
-    public double Mul(double num1, double num2) {
+    public int Mul(int num1, int num2) {
         multiplication.setMultiplication(num1, num2);
         result = multiplication.getMultiplication();
         return result;
     }
 
     //결과 리스트 수정(세터)
-    public void setResult(double result) {
+    public void setResult(int result) {
         this.arrayList.add(result);
     }
 
     //결과 불러오기
-    public double getResult() {
+    public int getResult() {
         return arrayList.getFirst();
     }
 

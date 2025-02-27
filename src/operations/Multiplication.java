@@ -1,17 +1,17 @@
 package operations;
 
 public class Multiplication {
-    private double firstNum;
-    private double secondNum;
+    private int firstNum;
+    private int secondNum;
 
     //세터
-    public void setMultiplication(double firstNum, double secondNum) {
+    public void setMultiplication(int firstNum, int secondNum) {
         this.firstNum = firstNum;
         this.secondNum = secondNum;
     }
 
     //게터
-    public double getMultiplication() {
+    public int getMultiplication() {
         return firstNum * secondNum;
     }
 }

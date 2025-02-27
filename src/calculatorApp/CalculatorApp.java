@@ -12,7 +12,7 @@ public class CalculatorApp {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            double result = 0;
+            int result = 0;
 
             //첫번째 숫자 입력
             System.out.println("첫번째 숫자를 입력하세요");
