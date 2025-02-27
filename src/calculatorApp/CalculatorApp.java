@@ -38,11 +38,11 @@ public class CalculatorApp {
                 result = calculator.Div(firstNumber, secondNumber);
             }
 
-            //결과 calculaote 클래스에 있는 ArrayList에 추가
-            calculator.setresult(result);
+            //결과 Calculate 클래스에 있는 ArrayList 에추가
+            calculator.setResult(result);
 
             //값 출력
-            System.out.println("값=" + calculator.getresult());
+            System.out.println("값=" + calculator.getResult());
 
             //먼저 저장된 데이터 삭제
             calculator.removeResult();
