@@ -55,13 +55,13 @@ public class Calculate {
     }
 
     //결과 리스트 수정(세터)
-    public void setresult(double result) {
+    public void setResult(double result) {
         this.arrayList.add(result);
     }
 
     //결과 불러오기
-    public double getresult() {
-        return result;
+    public double getResult() {
+        return arrayList.getFirst();
     }
 
     //처음 값 제거
