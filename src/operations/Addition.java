@@ -14,5 +14,4 @@ public class Addition {
     public int getAddition() {
         return firstNum + secondNum;
     }
-
 }
