@@ -3,6 +3,7 @@ package calculatorApp;
 import java.util.Scanner;
 
 import calculate.Calculate;
+import calculate.OperatorType;
 
 public class CalculatorApp {
     public static void main(String[] args) {
@@ -12,8 +13,6 @@ public class CalculatorApp {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            int result = 0;
-
             //첫번째 숫자 입력
             System.out.println("첫번째 숫자를 입력하세요");
             int firstNumber = sc.nextInt();
@@ -28,15 +27,8 @@ public class CalculatorApp {
             sc.nextLine();
 
             //입력한 연산자에 따라 메서드 호출
-            if (operator == '+') {
-                result = calculator.add(firstNumber, secondNumber);
-            } else if (operator == '-') {
-                result = calculator.Sub(firstNumber, secondNumber);
-            } else if (operator == '*') {
-                result = calculator.Mul(firstNumber, secondNumber);
-            } else if (operator == '/') {
-                result = calculator.Div(firstNumber, secondNumber);
-            }
+            OperatorType operatorType=  OperatorType.matchOperatorType(operator);
+            int result = operatorType.operate(firstNumber, secondNumber);
 
             //결과 Calculate 클래스에 있는 ArrayList 에추가
             calculator.setResult(result);
