@@ -13,6 +13,7 @@ public enum OperatorType {
 
     private final String symbol; //입력받을 연산자 기호
     private final Calculate calculate = new Calculate();
+    int result;
 
     //생성자:연산자 기호 설정
     OperatorType(String symbol) {
@@ -36,7 +37,6 @@ public enum OperatorType {
 
     //첫번째 숫자와 두번쨰숫자의 연산을 수행하는 메서드
     public int operate(int firstNumber, int secondNumber) {
-        int result;
         if (ADD.getSymbol().equals(symbol)) {
             result = calculate.Add(firstNumber, secondNumber);
             return result;
@@ -67,12 +67,12 @@ public enum OperatorType {
 
     //결과 불러오기
     public int getResult() {
-        return arrayList.getFirst();
+        return result;
     }
 
     //결과 리스트 첫번째 데이터값 제거
-    public void removeResult() {
-        arrayList.removeFirst();
+    public void removeResult(int index) {
+        arrayList.remove(index);
     }
 
     //람다식과 스트림을 활용하여 입력한 값보다 높은 결과값 출력
@@ -87,6 +87,8 @@ public enum OperatorType {
 
     //결과 값 모두 출력
     public void ViewAllResult() {
-        System.out.println(arrayList);
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.print(i + "번째 : " + arrayList.get(i)+"\n");
+        }
     }
 }
