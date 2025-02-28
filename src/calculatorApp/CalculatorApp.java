@@ -25,7 +25,7 @@ public class CalculatorApp {
                 sc.nextLine();
 
                 //입력한 연산자에 따라 메서드 호출
-                operatorType = OperatorType.matchOperatorType(operator);
+                OperatorType operatorType = OperatorType.matchOperatorType(operator);
                 int result = operatorType.operate(firstNumber, secondNumber);
 
                 //결과 Calculate 클래스에 있는 ArrayList 에추가
