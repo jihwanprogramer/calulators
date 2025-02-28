@@ -8,7 +8,7 @@ import calculate.OperatorType;
 public class CalculatorApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        OperatorType operatorType;
         while (true) {
             try {
                 //첫번째 숫자 입력
@@ -25,7 +25,7 @@ public class CalculatorApp {
                 sc.nextLine();
 
                 //입력한 연산자에 따라 메서드 호출
-                OperatorType operatorType = OperatorType.matchOperatorType(operator);
+                operatorType = OperatorType.matchOperatorType(operator);
                 int result = operatorType.operate(firstNumber, secondNumber);
 
                 //결과 Calculate 클래스에 있는 ArrayList 에추가
@@ -37,6 +37,8 @@ public class CalculatorApp {
                 //계산기 재시작 유무
                 System.out.println("1.계속하기(아무키나 입력) 2.연산결과 조회 및 삭제 3.종료(exit 입력) ");
                 String input = sc.next();
+                sc.nextLine();
+
 
                 //2번 입력시 결과 리스트 메뉴 출력
                 if (input.equals("2")) {
@@ -47,8 +49,12 @@ public class CalculatorApp {
                             //입력한 값보다 큰숫자의 결과만 출력
                             operatorType.UpResult(firstNumber, secondNumber);
                         } else if (UpResultInput == 2) {
-                            //결과값 리스트 첫번째인덱스 삭제
-                            operatorType.removeResult();
+                            //결과값 리스트 선택한 인덱스 삭제
+                            operatorType.ViewAllResult();
+                            System.out.println("삭제할 값의 번호를 입력해주세요");
+                            int indexChoice = sc.nextInt();
+                            operatorType.removeResult(indexChoice);
+                            System.out.println("삭제되었습니다.");
                         } else if (UpResultInput == 3) {
                             operatorType.ViewAllResult();
                         } else if (UpResultInput == 4) {
