@@ -14,8 +14,6 @@ public class Calculate {
     private final Multiplication multiplication;
     private final Division division;
 
-    int result = 0;
-
     //게산 결과를 저장할 ArrayList
     private List<Integer> arrayList = new ArrayList<>();
 
@@ -28,31 +26,27 @@ public class Calculate {
     }
 
     //덧셈 메서드
-    public int add(int num1, int num2) {
+    public int Add(int num1, int num2) {
         addition.setAddition(num1, num2);
-        result = addition.getAddition();
-        return result;
+        return addition.getAddition();
     }
 
     //나눗셈 메서드
     public int Div(int num1, int num2) {
         division.setDivision(num1, num2);
-        result = division.getDivision();
-        return result;
+        return division.getDivision();
     }
 
     //뺄셈 메서드
     public int Sub(int num1, int num2) {
         subtraction.setMSubtraction(num1, num2);
-        result = subtraction.getSubtraction();
-        return result;
+        return subtraction.getSubtraction();
     }
 
     //곱셈 메서드
     public int Mul(int num1, int num2) {
         multiplication.setMultiplication(num1, num2);
-        result = multiplication.getMultiplication();
-        return result;
+        return multiplication.getMultiplication();
     }
 
     //결과 리스트 수정(세터)
