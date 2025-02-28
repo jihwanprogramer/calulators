@@ -12,6 +12,6 @@ public class Subtraction {
 
     //게터
     public int getSubtraction() {
-        return firstNum / secondNum;
+        return firstNum - secondNum;
     }
 }

@@ -12,6 +12,6 @@ public class Division {
 
     //게터
     public int getDivision() {
-        return firstNum - secondNum;
+        return firstNum / secondNum;
     }
 }
