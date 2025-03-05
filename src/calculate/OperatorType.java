@@ -58,11 +58,11 @@ public enum OperatorType {
     }
 
     //결과 리스트 생성
-    private final List<Integer> arrayList = new ArrayList<>();
+    private static final List<Integer> arrayList = new ArrayList<>();
 
     //결과 리스트 추가(세터)
     public void setResult(int result) {
-        this.arrayList.add(result);
+        arrayList.add(result);
     }
 
     //결과 불러오기
