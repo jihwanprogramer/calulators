@@ -102,5 +102,5 @@ public void ViewAllResult()
 
 <br/>
 
-# 10. 수행 결과
+# 6. 수행 결과
 <img width="100%" alt="코드 컨벤션" src="https://github.com/jihwanprogramer/calulators/blob/main/img/%EC%88%98%ED%96%89%EA%B2%B0%EA%B3%BC.jpg?raw=true">
