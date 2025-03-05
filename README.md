@@ -1,4 +1,4 @@
-<img src="https://github.com/jihwanprogramer/calulators/blob/main/img/calculator.jpg?raw=true" alt="배너" width="100%"/>
+<img src="https://github.com/jihwanprogramer/calulators/blob/main/img/calculator.jpg?raw=true" alt="배너" width="80%"/>
 
 <br/>
 <br/>
@@ -36,7 +36,7 @@
 <br/>
 
 # 4. Project Structure (프로젝트 구조)
-```plaintext
+```
 caclulatorProject
 src/
 ├── calculate  
@@ -103,5 +103,4 @@ public void ViewAllResult()
 <br/>
 
 # 10. 수행 결과
-<img width="100%" alt="코드 컨벤션" src="https://github.com/user-attachments/assets/0dc218c0-369f-45d2-8c6d-cdedc81169b4">
-<img width="100%" alt="깃플로우" src="https://github.com/user-attachments/assets/2a4d1332-acc2-4292-9815-d122f5aea77c">
+<img width="100%" alt="코드 컨벤션" src="https://github.com/jihwanprogramer/calulators/blob/main/img/%EC%88%98%ED%96%89%EA%B2%B0%EA%B3%BC.jpg?raw=true">
